@@ -33,14 +33,16 @@ username:any=""
   }
   
   navigate(url:string){
-    
     if(url=="")
     window.location.reload()
     else
     this.router.navigate([url], {relativeTo:this.route});
+    // this.router.navigate([url])
   }
   logout(){
     this.log.logout();
+    this.router.navigate([""]);
+
     window.location.reload();
 }
 }

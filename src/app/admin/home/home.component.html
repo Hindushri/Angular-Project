@@ -1,2 +1,25 @@
-<p>Admin child component works!</p>
+<div class="container p-5">
+    <section style="background-color:#FFCC80;">
+        <ul class="flexJutify">
+           <div class="nav-bar">
+            <li (click) = "nav('admin/home')">
+                Home
+            </li>
+            <li (click) = "nav('admin/home/profile')">
+                Profile
+            </li>
+           </div>
+
+           <div class="logout">
+            <button type="button" class="btn" (click)="logout()" >
+              LogOut 
+            </button>  
+          </div>
+        </ul>
+    </section>
+    <div style="text-align: center">
+    <h1 style="font-size: 32px;font-weight: 600;">Admin Info</h1>
+    </div>
 <router-outlet></router-outlet>
+
+</div>

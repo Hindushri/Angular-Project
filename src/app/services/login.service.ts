@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Injectable({
@@ -27,18 +28,17 @@ export class LoginService {
       }
    }
 
-  getStatus():boolean{
-    return this.status;
-  }
+ 
 
   // To Register a User
-  register(obj:any):Observable<object>{
+  register(obj:any):Observable<any>{
     this.httpOptions = {
       headers: new HttpHeaders({
         'Content-Type':  'application/json'
         })
-    }
-    return this.http.post("http://localhost:4500/register",obj,this.httpOptions);
+    } 
+
+    return this.http.post("http://localhost:4500/users",obj,this.httpOptions);
   }
 
   //To check avalailability of mail id and username
@@ -48,23 +48,23 @@ export class LoginService {
   }
 
 // to Login
-  login(email:any,password:any):Observable<object>{
+  login(email:any,password:any):any{
  
     this.httpOptions = {
       headers: new HttpHeaders({
         'Content-Type':  'application/json',
-  
       })
     }
-    return this.http.post("http://localhost:4500/login",
-    {email:email,password:password},
-    this.httpOptions);
+    return this.http.get<any>("http://localhost:4500/users")
+    
   }
 
   logout():void{
      this.token="";
      this.username="";
      this.usertype="";
+     localStorage.clear();
+    
      sessionStorage.removeItem("token");
      sessionStorage.removeItem("username");
      sessionStorage.removeItem("usertype");

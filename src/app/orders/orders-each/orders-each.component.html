@@ -1,0 +1,13 @@
+<div class="product">
+    <div class="product-image">
+        
+        {{ product.name}}
+           <img src="{{product.image}}"/>
+    </div>
+    <div class="mt-5">
+        <div class="h3">{{product.name}}</div>
+        <div class="h6"> Price {{product.price | currency :"USD"}}</div>
+        <div class="h3">Count {{product.qty}}</div>
+        
+    </div>
+ </div>

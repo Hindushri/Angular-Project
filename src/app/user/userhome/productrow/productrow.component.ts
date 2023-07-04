@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProductrowComponent implements OnInit {
 
-  @Input() products:any[]=[];
+  @Input() products:any[]=[{name:"new one", price : "120", image:"2345t6y"}];
   @Input() producttitle:string="";
   constructor(public router:Router,public route:ActivatedRoute) { }
 

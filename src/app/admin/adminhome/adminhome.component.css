@@ -1,0 +1,31 @@
+
+
+.flexsentere > div {
+    margin-bottom: 20px;
+}
+
+.logout {
+    margin-right: 20px;
+    border: 1px solid black;
+    color: white;
+    border-radius: 6px;
+    font-weight: 600;
+
+} 
+
+.flexJutify {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-bar {
+    display: flex;
+}
+.nav-bar li {
+    margin-left: 25px;
+    padding: 12px;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}

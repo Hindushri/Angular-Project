@@ -1,79 +1,103 @@
-#login-card{
-    height: 500px;
-    width: 50%;
-    margin-top: 40px;
-    margin-left: 30%;
-    background-color: white;
-    box-shadow: 0px 2px 10px lightgray;
-    position: relative;
-    border:2px solid black;
-    
-}
-
-
-#image-left{
-    position: absolute;
-    left: 0px;
-    top:0px;
-    height: 30%;
-    width:30%;
-}
-
-#image-center{
-    position: absolute;
-    left: 45%;
-    top:0px;
-    height: 35%;
-    width:35%;
-}
-#image-bottom-right{
-    position: absolute;
-    right: 0%;
-    bottom: 0px;
-    height: 25%;
-    width:25%;
-}
-
-#image-bottom-right img, #image-left img, #image-bottom-center img{
-    height: 100%;
-    width: 100%;
-}
-
-#log-table{
-    position: absolute;
-    top: 35%;
-    left: 15%;
-}
-input[type="text"], input[type="password"]{
-    height: 30px;
-    width: 200px;
-}
-
-button{
-    background-color: #2ECC71;
-    color: white;
-    padding: 10px;
-    margin: 10px;
-    border: none;
-}
-
-th,td{
-    height: 50px;
-    width: 250px;
-}
-
-@media only screen and (max-width: 720px) {
-  #login-card{
-     width: 100%;
-     margin: 0px;
-     margin-left: 0px;
-  }
-}
-
-.loading, .errors{
+.errors{
     position: absolute;
     bottom: 50px;
     text-align: center;
-    left: 25%;
-    color: green;
+    left: 75%;
+    color: red;
+    border: 1px solid white;
+    opacity: 0.7;
+    padding: 10px;
 }
+
+.h-100 {
+    height: 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.flexCenterRow {
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.Cencontainer {
+    margin: 0;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.login {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    padding: 0%;
+
+}
+
+.login .login-left {
+    width: 50%;
+    height: 100%;
+}
+
+.login-left img {
+    width: 100%;
+    height: 100vh;
+}
+
+
+.login-right {
+    padding: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+
+.login-right table tr input {
+    margin-bottom: 15px;
+
+}
+
+.login-right {
+    font-size: 24px;
+}
+
+.login-right table table th {
+    margin-right: 10px;
+
+}
+
+
+.login-right th {
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+
+.login-right button {
+    background-color: #FFCC80 ;
+    color: gray;
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+

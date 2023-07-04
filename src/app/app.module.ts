@@ -10,11 +10,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptorService } from './services/auth-interceptor.service';
 import { Router } from '@angular/router';
+import { OrdersComponent } from './orders/orders.component';
+import { OrdersEachComponent } from './orders/orders-each/orders-each.component';
+import { WishListComponent } from './orders/wish-list/wish-list.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    OrdersComponent,
+    OrdersEachComponent,
+    WishListComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

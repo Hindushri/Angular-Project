@@ -41,6 +41,13 @@
       "type": "admin",
       "email": "hindush3@gmail.com",
       "id": 23
+    },
+    {
+      "username": "Narasima",
+      "password": "123456",
+      "type": "admin",
+      "email": "naras@gmail.com",
+      "id": 24
     }
   ],
   "ListForUser": [
